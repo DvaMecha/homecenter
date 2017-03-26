@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import $ from 'jquery' 
+import Menu from '@/components/Menu'
+//import 'src/lib/bootstrap/css/bootstrap.min.css'
+//import '../lib/bootstrap/js/bootstrap.min.js'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -10,3 +13,4 @@ new Vue({
   router,
   render: h => h(App)
 })
+Vue.component('py-menu',Menu);
