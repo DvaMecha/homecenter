@@ -1,5 +1,12 @@
 <template>
-  <div class="hello">
+  <div class="equ_view">
+  <div class="sidebar-nav">
+  <ul class="nav">
+    <li v-for="item in items">{{ item.message }}</li>
+  </ul>
+  
+  
+  </div>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     
@@ -8,10 +15,14 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'equ_view',
   data () {
     return {
-      msg: '设备管理'
+      msg: '设备管理',
+      items: [
+        {message: 'Foo' },
+        {message: 'Bar' }
+      ]
     }
   }
 }

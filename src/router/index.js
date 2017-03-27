@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import Home from '@/router/Home'
 import EquView from '@/router/EquView'
 import SetView from '@/router/SetView'
 
@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'hello',
-      component: Hello
+      name: 'home',
+      component: EquView
     },
     {
       path: '/equ',

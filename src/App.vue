@@ -1,11 +1,15 @@
 <template>
   <div id="app">
-  <py-menu></py-menu>
-  <router-view></router-view>
+    <py-menu></py-menu>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import Menu from '@/components/Menu'
+Vue.component('py-menu',Menu);
+
 export default {
   name: 'app'
 }
