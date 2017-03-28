@@ -3,11 +3,13 @@
     <py-menu></py-menu>
     <router-view></router-view>
   </div>
+   
 </template>
 
 <script>
 import Vue from 'vue'
 import Menu from '@/components/Menu'
+
 Vue.component('py-menu',Menu);
 
 export default {

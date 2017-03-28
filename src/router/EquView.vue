@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'equ_view',
+  name: 'Equ_view',
   data () {
     return {
       msg: '设备管理',
