@@ -14,10 +14,16 @@
 					</div>
 					<form class="form-horizontal" role="form">
                         <div class="form-group">
-
+	<p>input 元素：</p>
+  <input v-model="message" placeholder="设备名称">
+  <p> {{ equmessage }}</p>
+    
+  <p>设备厂商</p>
+  <p style="white-space: pre">{{ equmessage2 }}</p>
+  <textarea v-model="message2" placeholder="多行文本输入……"></textarea>
                         </div>
 						<div class="form-group">
-							 <label for="inputEmail3" class="col-sm-2 control-label">设备名称</label>
+							 <label for="inputEmail3" class="col-sm-2 control-label">设备型号</label>
 							<div class="col-sm-10">
 								<input class="form-control" id="inputEmail3" type="email" />
 							</div>
@@ -52,6 +58,7 @@
 </template>
 
 <script>
+import server from servers.api
 export default {
   name: 'add_view',
   data () {
@@ -59,8 +66,12 @@ export default {
       msg: '添加设备',
       items: [
         {message: 'Foo' },
-        {message: 'Bar' }
-      ]
+        {message: 'Bar' },
+      ],
+			equlist:function(){
+				return server.getEquList();
+			}
+
     }
   }
 }
